@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-primary elevation-4">
   <!-- Brand Logo -->
   <a href="<?php echo site_url('') ?>" class="brand-link text-center">
     <span class="brand-text font-weight-light"><?php echo $this->session->userdata('toko')->nama ?></span>
@@ -101,13 +101,19 @@
             <p>Transaksi</p>
           </a>
         </li>
-        <li class="nav-item has-treeview <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_stok_masuk' || $uri == 'laporan_stok_keluar' ? 'menu-open' : 'no' ?>">
+        <li class="nav-item has-treeview <?php echo $uri == 'laporan_bulanan' || $uri == 'laporan_stok_masuk' || $uri == 'laporan_stok_keluar' ? 'menu-open' : 'no' ?>">
           <a href="<?php echo site_url('laporan') ?>" class="nav-link <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_stok_masuk' || $uri == 'laporan_stok_keluar' ? 'active' : 'no' ?>">
             <i class="fas fa-book nav-icon"></i>
-            <p>Laporan</p>
+            <p>Laporan </p>
             <i class="right fas fa-angle-right"></i>
           </a>
           <ul class="nav-treeview">
+            <li class="nav-item">
+              <a href="<?php echo site_url('laporan_bulanan') ?>" class="nav-link <?php echo $uri == 'laporan_bulanan' ? 'active' : 'no' ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Laporan Bulanan</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="<?php echo site_url('laporan_penjualan') ?>" class="nav-link <?php echo $uri == 'laporan_penjualan' ? 'active' : 'no' ?>">
                 <i class="far fa-circle nav-icon"></i>

@@ -46,7 +46,7 @@ function remove(id) {
         text: "Hapus data ini?",
         type: "warning",
         showCancelButton: true
-    }).then(() => {
+    }).then((e) => {
         e.value && $.ajax({
             url: deleteUrl,
             type: "post",
